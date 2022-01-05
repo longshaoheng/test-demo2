@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#obox
+{
+  background: #22334D;
+  width: 1920px;
+  height: 46px;
+  margin: 0px auto;
+  border-style:solid;
+  position: relative;
+  top: 100px;
+}
+
+.obox ul
+{
+  width: 210px;
+  list-style: none;
+}
+
+.obox ul li
+{
+  
+  width: 64px;
+  height: 20px;
+  background: #1B293E;;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 1;
+  float: left;
+  text-align: center;
+  position: relative;
+  left: 950px;
+  top: 10px;
+}
+.obox ul li a
+{
+  width: 20px;
+  font-size: 16px;
+  height: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 19px;
+  text-decoration: none;
+}
+
+.obox ul li:active
+{
+  background-color: #48A8F5;
+}
+
+
