@@ -1,0 +1,81 @@
+
+//实现组合控件
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="react.js"></script>
+	<script src="react-dom.js"></script>
+	<script src="browser.min.js"></script>
+	<style type="text/css">
+		#contaniner
+		{
+			background-color: #FFF;
+		}
+	</style>
+</head>
+<body>
+	<div id="contaniner"></div>
+	<script type="text/babel">
+	var destination=document.querySelection("#contaniner");
+	//创建第一个控件
+	var Square=React.createClass({
+		render:funtion(){
+			//给第一个控制设置样式
+			var SquareStyle={
+				height:150,
+				backgroundColor:this.props.color
+			};
+			return(
+			//调用控件样式
+			<div style={SquareStyle}></div>
+			);
+		}
+	})
+	//创建第二个控件
+	var Label=React.createClass({
+		//给控件添加样式
+		var LaberStyle={
+			font-Family:"sans-serif",
+			fontWeight:"bold",
+			padding:13,
+			margin:0
+		};
+		render:funtion(){
+			//调用控件样式
+			<div style={LaberStyle}></div>
+			<p>{this.props.color}</p>
+		};
+	})
+	//两个控件组合起来
+	var Card=React.createClass({
+		render:function(){
+			//设置Card样式
+			var CardStyle={
+				height:200,
+				width:150,
+				backgroundColor:"#FFF",
+				WebkitFilter:"drop-shadow(0px 0px 5px #666)",
+				filter:"drop-shadow(0px 0px 5px #666)"
+			};
+			//把设置的Card样式添加到组
+		return(
+			<div style={CardStyle}> 
+			<Square color={this.props.color}/>
+			<Label color={this.props.color}/>
+			</div>
+			);
+		}
+	})
+
+	//调用控件
+	ReactDOM.render(
+	<div>
+		<Card color="#FFA737"/>
+	</div>,
+	destination
+	);
+	</script>
+</body>
+</html>
