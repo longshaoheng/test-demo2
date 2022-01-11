@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React2</title>
+  <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+  <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script type="text/babel">
+   class HelloWorld extends React.Component{
+    render(){
+      return(
+        <div>
+        <p>HelloWord {this.props.greetTarget}</p>
+        </div>
+      )
+    }
+}
+
+      ReactDOM.render(
+        <div>
+          <HelloWorld greetTarget="jack"/>
+          <HelloWorld greetTarget="Bod"/>
+          <HelloWorld greetTarget="Snnd"/>
+          </div>
+        ,
+          document.querySelector("#container")
+      )
+    </script>
+</body>
+</html>

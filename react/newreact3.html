@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React3</title></title></title></title>
+  <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+  <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <style type="text/css">
+    #container{
+      padding: 50px;
+      background-color: #FFF;
+
+    } 
+  </style>
+  
+</head>
+<body>
+  <div id="container"></div>
+  <script type="text/babel">
+    export default withRouter(Test)
+    var letterStyle={
+      padding:10,
+      margin:10,
+      backgroundColor:this.prompt.color,
+      color:"#333",
+      display:"inline-block",
+      fontFamily:"monospace",
+      fontSize:32,
+      textAlign:"center"
+    };
+    class Letter extends React.Component{
+      render(){
+        
+        return(
+          <div style={letterStyle}>
+            {this.props.children}
+            </div>
+        )
+      }
+    }
+    var destination=document.querySelector("#container");
+    ReactDOM.render(
+      <div>
+        <Letter color="red">Y</Letter>
+        <Letter>L</Letter>
+        <Letter>E</Letter>
+        <Letter>R</Letter>
+        </div>,
+        destination
+    )
+  </script>
+</body>
+</html>

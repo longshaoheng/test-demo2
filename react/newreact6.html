@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>React记录时间</title>
+  <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js "></script>
+  <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <script type="text/babel">
+      var destination=document.querySelector("#container")
+
+      class LightningCounter extends React.Component{
+          getInitialState:function(){
+
+          } ,
+        render(){
+           return(
+            <div>
+              <h1>你好</h1>   
+              </div>
+           )
+         }
+      }
+
+      var displayStyle={
+        width:250,
+        textAlign:"center",
+        backgroundColor:"black",
+        padding:40,
+        color:"#999",
+        fontFamily:"sans-serif",
+        borderRadius:10 
+      }
+
+      class LiLightningCountererDisplay extends React.Component{
+        render(){
+          return(
+            <div style={displayStyle}>
+              <LightningCounter/>
+              </div>
+          )
+        }
+      }
+      ReactDOM.render(
+        <div>
+          <LiLightningCountererDisplay/>
+          </div>
+        ,
+        destination
+      )
+    </script>
+  </div>
+</body>
+</html>

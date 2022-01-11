@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+  <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <title>官网</title>
+</head>
+<body>
+  <div id="tp">
+    <div class="tpimg"></div>
+    <div class="tppt"></div>
+    <div class="wz"></div>
+  </div>
+  <script type="text/babel">
+    
+     var imgStyle={
+       border:1,solid,red
+     }
+    var tpStyle={
+      width: 1920,
+      height: 90,
+      display:"flex",
+      background: "#2A3F5D",
+      alignContent:"space-between"
+
+    }
+    class Tp extends React.Component{
+      render(){
+        return(
+          <div style={tpStyle}>
+            <div style={imgStyle}>
+              <img src={imgURL}/>
+              </div>  
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(
+      <Tp/>,
+      document.getElementById("tp")
+    );
+
+  </script>
+</body>
+</html>

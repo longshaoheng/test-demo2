@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React</title>
+  <script src="react.js"></script>
+  <script src="react-dom.js"></script>
+  <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+  <script src="ReactRouter.min.js"></script>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+    <script type="text/babel">
+      var  destination=document.querySelector("#container");
+      var APP=React.createClass({
+        render:function(){
+          <div>
+            <h1>Simple SAP</h1>
+            <ul className="header">
+              <li>李白</li>
+              <li>杜甫</li>
+              <li>李商隐</li>
+              </ul>
+            </div>
+        }
+      })
+      ReactDOM.render(
+        <div>
+          <APP/>
+          </div>
+        ,destination
+      )
+    </script>
+
+</body>
+</html>
